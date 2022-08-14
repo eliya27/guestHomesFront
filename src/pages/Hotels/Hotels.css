@@ -1,0 +1,65 @@
+.hotelListContainer {
+  display: flex;
+  margin-top: 0;
+  justify-content: center;
+  background-color: var(--color-footer);
+}
+.hotelListContainer__Listwrapper {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.hotelListContainer__Listwrapper-results {
+  flex: 3;
+}
+.hotel__bottomButton {
+  display: none;
+}
+.HotelMenuLarge {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+.HotelMenuMobile {
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .HotelMenuLarge {
+    display: none;
+  }
+  .HotelMenuMobile {
+    display: flex;
+    position: sticky;
+    justify-content: flex-start;
+    bottom: 25rem;
+    z-index: 801;
+  }
+  .hotelListContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .hotelListContainer__Listwrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .hotel__bottomButton {
+    display: flex;
+    position: sticky;
+    z-index: 800;
+    bottom: 0.5rem;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.426);
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0 0 0;
+    width: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    color: var(--color-footer);
+  }
+  .searchBarButton {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+  }
+}

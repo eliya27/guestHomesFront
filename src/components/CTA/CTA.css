@@ -1,0 +1,67 @@
+.CTA {
+  background-color: var(--color-button);
+  padding: 10px 0;
+  margin: 0rem 0 0 0;
+  color: var(--color-footer);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.CTA h1 {
+  padding-top: 3rem;
+}
+.CTA p {
+  padding: 1rem 0 0.65rem 0;
+}
+.CTA__input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  color: var(--color-black);
+}
+.CTA__input input {
+  padding: 0.8rem;
+  width: 300px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.CTA__input button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-header);
+  color: var(--color-black);
+}
+@media screen and (max-width: 650px) {
+  .CTA {
+    padding: 0 2rem;
+    margin: 0rem 0;
+  }
+  .CTA h1 {
+    margin-top: 0.5rem;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .CTA p {
+    font-size: 15px;
+  }
+  .CTA__input {
+    display: flex;
+    justify-content: space-between;
+  }
+  .CTA__input input {
+    padding: 0.8rem;
+    width: 200px;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+  .CTA__input button {
+    padding: 0.8rem;
+    border-radius: 5px;
+  }
+}

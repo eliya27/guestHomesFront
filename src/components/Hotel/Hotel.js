@@ -45,7 +45,7 @@ const Hotel = () => {
   const path = location.pathname.split("/")[2];
   console.log(location);
   const { data, loading, error } = useFetch(
-    `http://localhost:7000/api/hotels/find/${path}`
+    `https://guesthomesapi.azurewebsites.net/api/hotels/find/${path}`
   );
   const Total_price = Math.ceil(data.cheapestPrice * days);
   const ImageData = [

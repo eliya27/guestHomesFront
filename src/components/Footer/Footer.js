@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="gpt3__footer-links">
         <div className="gpt3__footer-links_logo">
           <h3>
-            MyReserve<small>&trade;</small>
+            GuestHomes<small>&trade;</small>
           </h3>
           <p>
             <small>Dar es salaam.</small>

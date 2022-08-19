@@ -12,7 +12,7 @@
   position: relative;
   border-radius: 0.4rem;
   overflow: hidden;
-  box-shadow: 1px 1px 1rem rgb(95, 92, 92);
+  box-shadow: 1px 1px 1rem rgba(126, 112, 112, 0.572);
   margin: 5px;
 }
 .pList__Item-imgContainer {
@@ -64,20 +64,26 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 10px;
+    justify-content: center;
   }
   .pList__Item {
     width: 80vw;
     margin: 0.5rem;
+    border: 1px solid black;
   }
   .pList__Item-Img {
     width: 100%;
     height: 180px;
     object-fit: cover;
   }
-  .pList__Item h1 {
-    font-size: 15px;
+  .pList__Item p {
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 3px;
   }
   .pList__Item h3 {
-    font-size: 12px;
+    font-size: 20px;
+
+    border-bottom: 1px solid black;
   }
 }

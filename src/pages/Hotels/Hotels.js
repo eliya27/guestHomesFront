@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./Hotels.css";
-
+//Components
 import Header from "../../components/Header/Header";
 import SearchItems from "../../components/SearchItems/SearchItems";
 import HotelMenu from "../../components/HotelMenu/HotelMenu";
 import Navbar from "../../components/navbar/Navbar";
+import HotelMenuLarge from "../../components/HotelMenu/HotelMenuLarge";
+
 import useFetch from "../../components/hooks/useFetch";
 import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import HotelMenuLarge from "../../components/HotelMenu/HotelMenuLarge";
+
 const Hotels = () => {
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);

@@ -3,7 +3,7 @@ import "./FeaturedProperties.css";
 import useFetch from "../hooks/useFetch";
 const FeaturedProperties = () => {
   const { loading, data, error } = useFetch(
-    "https://guesthomesapi.azurewebsites.net/api/hotels?featured=true&limit=5"
+    "https://guesthomesapi.azurewebsites.net/api/hotels?featured=true&limit=6"
   );
   return (
     <div className="featuredProperties ">

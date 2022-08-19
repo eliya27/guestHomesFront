@@ -47,7 +47,6 @@
   width: 100%;
   max-width: 1024px;
   margin-top: 1rem;
-  /*border: 1px solid blueviolet;*/
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
@@ -125,6 +124,7 @@
 }
 .arrow {
   cursor: pointer;
+  color: var(--color-footer);
 }
 .close {
   position: absolute;
@@ -170,5 +170,16 @@
     height: 250px;
     position: absolute;
     z-index: 800;
+  }
+  .arrow {
+    cursor: pointer;
+    color: var(--color-black);
+  }
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: var(--color-black);
+    cursor: pointer;
   }
 }

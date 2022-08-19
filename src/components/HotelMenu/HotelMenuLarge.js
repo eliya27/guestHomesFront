@@ -15,9 +15,7 @@ const HotelMenuLarge = ({ setMin, setMax, handleClick }) => {
 
   return (
     <div className="hotelListContainer__Listwrapper-searchLarge">
-      <h1 className="hotelListContainer__Listwrapper-search__title">
-        Search(Large)
-      </h1>
+      <h1 className="hotelListContainer__Listwrapper-search__title">Search</h1>
       <div className="hotelListContainer__Listwrapper-search_options">
         <div className="hotelListContainer__Listwrapper-search__bar Destination">
           <label>Destination</label>

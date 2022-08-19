@@ -12,6 +12,7 @@
   border-radius: 0.7rem;
   overflow: hidden;
   position: relative;
+  border: 1px solid black;
 }
 .Featured__Item-img {
   width: 100%;

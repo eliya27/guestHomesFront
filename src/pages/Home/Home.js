@@ -15,11 +15,11 @@ const Home = () => {
       <div className="homeContainer">
         <Featured />
         <div className="homeContainer-title_container">
-          <h1 className="homeContainer-title">Browse by property type</h1>
+          <h1 className="homeContainer-title">Our Properties List</h1>
         </div>
         <PropertyList />
         <div className="homeContainer-title_container">
-          <h1 className="homeContainer-title">Most picked Hotels</h1>
+          <h1 className="homeContainer-title">Most picked Homes</h1>
         </div>
         <FeaturedProperties />
       </div>

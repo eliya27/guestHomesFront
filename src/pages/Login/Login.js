@@ -39,13 +39,13 @@ const Login = () => {
       )
         .then((response) => response.json())
         .then((user) => {
-          console.log(user);
+          //console.log(user);
           if (user._id) {
             dispatch({ type: "LOGIN_SUCCESS", payload: user });
-            console.log(`User with ID: ${user._id} successfully logged in`);
+            //console.log(`User with ID: ${user._id} successfully logged in`);
             navigate("/");
           } else {
-            console.log("User not found");
+            //console.log("User not found");
             dispatch({ type: "LOGIN_FAIL", payload: error.response });
             navigate("/error");
           }

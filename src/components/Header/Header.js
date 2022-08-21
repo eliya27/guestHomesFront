@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "./Header.css";
 //Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -100,7 +100,7 @@ const Header = ({ type }) => {
             </p>
             {!user && (
               <button className="header__headerContainer-headerBtn">
-                Sign In/Register
+                <Link to="/login">Sign In/Register</Link>
               </button>
             )}
 

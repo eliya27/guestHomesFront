@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./Error.css";
 const Error = () => {
   return (
@@ -11,7 +11,7 @@ const Error = () => {
       </div>
       <div className="error__back">
         <p>
-          Back to <a href="/login">Login page</a>
+          Back to <Link to="/">Main page</Link>
         </p>
       </div>
     </div>

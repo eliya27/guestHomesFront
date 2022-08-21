@@ -25,6 +25,13 @@ const Navbar = () => {
         {user ? (
           <div className="navContainer-user">
             <Link to="/login">{user.username}</Link>
+            <p
+              onClick={() => {
+                localStorage.clear("access_token");
+              }}
+            >
+              <a href="/">Logout</a>
+            </p>
           </div>
         ) : (
           <div className="navContainer__navItems">
@@ -57,6 +64,15 @@ const Navbar = () => {
               {user ? (
                 <div className="gpt3__navbar-menu_container-user">
                   <span>{user.username}</span>
+                  <div>
+                    <p
+                      onClick={() => {
+                        localStorage.clear("access_token");
+                      }}
+                    >
+                      <a href="/">Logout</a>
+                    </p>
+                  </div>
                 </div>
               ) : (
                 <div className="gpt3__navbar-menu_container-auth">
@@ -77,7 +93,7 @@ const Navbar = () => {
                 </div>
                 <div className="gpt3__navbar-menu_container-navbarItems_item">
                   <FontAwesomeIcon icon={faPlane} />
-                  <span>Flights</span>
+                  <span>Logout</span>
                 </div>
                 <div className="gpt3__navbar-menu_container-navbarItems_item">
                   <FontAwesomeIcon icon={faCar} />

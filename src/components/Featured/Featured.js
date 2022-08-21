@@ -1,4 +1,5 @@
 import React from "react";
+import Loader from "../Loader/Loader";
 import useFetch from "../hooks/useFetch";
 import "./Featured.css";
 const Featured = () => {
@@ -13,7 +14,7 @@ const Featured = () => {
   return (
     <div className="Featured">
       {loading ? (
-        "Please wait..!"
+        <Loader />
       ) : (
         <>
           <div className="Featured__Item">

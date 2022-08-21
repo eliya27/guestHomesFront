@@ -80,6 +80,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+  }
+  .gpt3__navbar-menu_container-user a {
+    color: var(--color-button);
+    text-decoration: underline;
   }
   .gpt3__navbar-menu_container-auth button {
     padding: 10px;

@@ -5,7 +5,7 @@
   position: sticky;
   height: max-content;
   width: 100%;
-  top: 20rem;
+  top: 10rem;
 }
 .hotelListContainer__Listwrapper-search__title {
   font-size: 25px;
@@ -80,7 +80,7 @@
   padding: 3px 7px;
 }
 .hotelListContainer__Listwrapper-search__Item-options input {
-  width: 45px;
+  width: 70px;
   border: none;
   border-radius: 2px;
   text-align: center;

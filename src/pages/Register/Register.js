@@ -30,7 +30,10 @@ const Register = () => {
           "Content-type": "application/json; charset=UTF-8",
         },
       })
-        .then((response) => response.json())
+        .then((response) => {
+          response.json();
+          console.log(response);
+        })
         .then(() => navigate("/login"));
     } catch (error) {
       console.log(error);
@@ -61,6 +64,11 @@ const Register = () => {
         <button onClick={handleClick} className="login__button">
           Register
         </button>
+        <div className="register__links">
+          <p>
+            Have an account? <a href="/login">login</a>
+          </p>
+        </div>
       </div>
     </div>
   );

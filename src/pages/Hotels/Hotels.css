@@ -10,7 +10,17 @@
   gap: 20px;
 }
 .hotelListContainer__Listwrapper-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 3;
+}
+.hotelListContainer__Listwrapper-results_loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 .hotel__bottomButton {
   display: none;

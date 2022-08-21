@@ -11,6 +11,7 @@ import useFetch from "../../components/hooks/useFetch";
 import { useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Hotel__loader from "./Hotel__loader/Hotel__loader";
 
 const Hotels = () => {
   const location = useLocation();
@@ -34,6 +35,7 @@ const Hotels = () => {
             <HotelMenuLarge
               setMin={setMin}
               setMax={setMax}
+              setDestination={setDestination}
               handleClick={handleClick}
             />
           </div>
@@ -41,10 +43,12 @@ const Hotels = () => {
 
         <div className="hotelListContainer__Listwrapper-results">
           {loading ? (
-            "Loading.."
+            <div className="hotelListContainer__Listwrapper-results_loader">
+              <Hotel__loader />
+            </div>
           ) : (
             <>
-              {data.map((item) => (
+              {data?.map((item) => (
                 <SearchItems item={item} key={item._id} />
               ))}
             </>
@@ -55,6 +59,7 @@ const Hotels = () => {
             <HotelMenu
               setMin={setMin}
               setMax={setMax}
+              setDestination={setDestination}
               handleClick={handleClick}
             />
           )}

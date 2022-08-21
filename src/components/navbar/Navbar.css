@@ -82,7 +82,7 @@
     justify-content: center;
     flex-direction: column;
   }
-  .gpt3__navbar-menu_container-user a {
+  .gpt3__navbar-menu_container-user Link {
     color: var(--color-button);
     text-decoration: underline;
   }

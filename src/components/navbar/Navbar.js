@@ -30,7 +30,7 @@ const Navbar = () => {
                 localStorage.clear("access_token");
               }}
             >
-              <a href="/">Logout</a>
+              <Link to="/">Logout</Link>
             </p>
           </div>
         ) : (

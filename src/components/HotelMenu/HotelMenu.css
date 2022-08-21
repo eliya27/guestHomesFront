@@ -80,10 +80,11 @@
   padding: 3px 7px;
 }
 .hotelListContainer__Listwrapper-search__Item-options input {
-  width: 45px;
+  width: 100px;
   border: none;
   border-radius: 2px;
   text-align: center;
+  border: 1px solid black;
 }
 
 @media screen and (max-width: 650px) {
@@ -127,7 +128,7 @@
     font-weight: 400;
   }
   .hotelListContainer__Listwrapper-search__bar input {
-    width: 90px;
+    width: 100px;
     padding: 5px;
     border-radius: 5px;
     border: none;
@@ -159,7 +160,7 @@
     color: white;
     font-size: 10x;
     padding: 3px;
-    width: 80px;
+    width: 100px;
     border-radius: 5px;
     margin: 3px 7px;
     cursor: pointer;
@@ -193,12 +194,10 @@
     align-items: center;
   }
   .hotelListContainer__Listwrapper-search__Item-options label {
-    font-size: 12px;
+    font-size: 20px;
   }
   .hotelListContainer__Listwrapper-search__Item-options input {
-    width: 20px;
-    border: none;
-    border-radius: 2px;
-    text-align: center;
+    width: 30px;
+    border: 1px solid black;
   }
 }

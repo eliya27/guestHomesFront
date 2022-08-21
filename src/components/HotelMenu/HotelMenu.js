@@ -23,7 +23,7 @@ const HotelMenu = ({ setMin, setMax, handleClick }) => {
             type="text"
             placeholder={destination}
             className="hotelListContainer__Listwrapper-search__input"
-            onChange={(e) => setMin(e.target.value)}
+            onChange={(e) => setDestination(e.target.value)}
           />
         </div>
         <div className="hotelListContainer__Listwrapper-search__bar Date">
@@ -72,7 +72,11 @@ const HotelMenu = ({ setMin, setMax, handleClick }) => {
             </div>
             <div className="hotelListContainer__Listwrapper-search__Item-options">
               <label>Room</label>
-              <input type="number" placeholder={options.room} />
+              <input
+                type="number"
+                placeholder={options.room}
+                className="option__input"
+              />
             </div>
           </div>
         </div>

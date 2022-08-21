@@ -25,3 +25,11 @@
   font-weight: 600;
   cursor: pointer;
 }
+.login__links p {
+  font-size: 12px;
+}
+.login__links a {
+  color: var(--color-button);
+  font-weight: 600;
+  text-decoration: underline;
+}

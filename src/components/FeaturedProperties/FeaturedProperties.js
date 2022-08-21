@@ -1,6 +1,7 @@
 import React from "react";
 import "./FeaturedProperties.css";
 import useFetch from "../hooks/useFetch";
+import PropertyLoader from "../PropertyLoader/PropertyLoader";
 const FeaturedProperties = () => {
   const { loading, data, error } = useFetch(
     "https://guesthomesapi.azurewebsites.net/api/hotels?featured=true&limit=6"
@@ -8,7 +9,7 @@ const FeaturedProperties = () => {
   return (
     <div className="featuredProperties ">
       {loading ? (
-        "Data Loading..."
+        <PropertyLoader />
       ) : (
         <>
           {data.map((featuredData) => (

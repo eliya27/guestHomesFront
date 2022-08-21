@@ -14,10 +14,11 @@ const Login = () => {
     }));
   };
 
-  const [credentails, setCredentials] = useState({
+  const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,
   });
+
   const handleClick = async (focus) => {
     focus.preventDefault();
     dispatch({ type: "LOGIN_START" });
@@ -27,8 +28,8 @@ const Login = () => {
         {
           method: "POST",
           body: JSON.stringify({
-            username: credentails.username,
-            password: credentails.password,
+            username: credentials.username,
+            password: credentials.password,
           }),
 
           headers: {
@@ -37,13 +38,27 @@ const Login = () => {
         }
       )
         .then((response) => response.json())
-        .then((res) => dispatch({ type: "LOGIN_SUCCESS", payload: res }))
-        .then(() => navigate("/"));
+        .then((user) => {
+          console.log(user);
+          if (user._id) {
+            dispatch({ type: "LOGIN_SUCCESS", payload: user });
+            console.log(`User with ID: ${user._id} successfully logged in`);
+            navigate("/");
+          } else {
+            console.log("User not found");
+            dispatch({ type: "LOGIN_FAIL", payload: error.response });
+            navigate("/error");
+          }
+        });
+
+      //.then((res) => dispatch({ type: "LOGIN_SUCCESS", payload: res }));
+      //.then(() => navigate("/"));
     } catch (error) {
-      dispatch({ type: "LOGIN_FAIL", payload: error.response });
+      //dispatch({ type: "LOGIN_FAIL", payload: error.response });
+      navigate("/error");
     }
   };
-  console.log(user);
+  //console.log(user);
 
   return (
     <div className="login">
@@ -68,6 +83,21 @@ const Login = () => {
           Login
         </button>
         {error && <span>{error.message}</span>}
+        <div className="login__links">
+          <p>
+            Don't have an account? <a href="/register">register</a>
+          </p>
+          <p>
+            <a href="/">Main page</a>
+          </p>
+          <p
+            onClick={() => {
+              localStorage.clear("access_token");
+            }}
+          >
+            <a href="/">Logout</a>
+          </p>
+        </div>
       </div>
     </div>
   );

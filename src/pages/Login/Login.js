@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 const Login = () => {
@@ -85,7 +85,7 @@ const Login = () => {
         {error && <span>{error.message}</span>}
         <div className="login__links">
           <p>
-            Don't have an account? <a href="/register">register</a>
+            Don't have an account? <Link to="/register">register</Link>
           </p>
           <p>
             <a href="/">Main page</a>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 import "./Register.css";
 const Register = () => {
   const navigate = useNavigate();
@@ -66,7 +67,7 @@ const Register = () => {
         </button>
         <div className="register__links">
           <p>
-            Have an account? <a href="/login">login</a>
+            Have an account? <Link to="/login">login</Link>
           </p>
         </div>
       </div>
